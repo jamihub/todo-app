@@ -11,7 +11,7 @@ const useStyles = makeStyles({
     margin: "30px auto",
     padding: "30px",
     borderRadius: "10px",
-    boxShadow: "0px 0px 12px -3px #000000",
+    boxShadow: "0px 0px 12px -3px #000000"
   },
 });
 

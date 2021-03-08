@@ -8,7 +8,6 @@ export const signUp = (user) => {
       .post(`${url}/signup`, user)
       .then((token) => {
         localStorage.setItem("token", token.data);
-
         dispatch({
           type: "SIGN_UP",
           token: token.data,

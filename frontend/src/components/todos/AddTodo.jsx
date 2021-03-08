@@ -22,10 +22,8 @@ const useStyles = makeStyles({
 const AddTodo = ({ todo, setTodo }) => {
     const classes = useStyles();
     const dispatch = useDispatch()
-
     const handleSubmit = (e) => {
         e.preventDefault();
-
         if(todo._id){
             const id = todo._id;
             const updatedTodo = {
@@ -35,15 +33,13 @@ const AddTodo = ({ todo, setTodo }) => {
                 author: todo.author,
                 uid: todo.uid
             }
-            
             dispatch(updateTodo(updatedTodo, id));
-
-        } else{
+        } 
+        else {
             const newTodo = {
                 ...todo,
                 date: new Date()
             }
-
             dispatch(addTodo(newTodo));
         }
         setTodo({ name: '', isComplete: false});
